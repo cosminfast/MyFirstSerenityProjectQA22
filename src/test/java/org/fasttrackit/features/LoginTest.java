@@ -12,7 +12,7 @@ public class LoginTest extends BaseTest {
     private LoginSteps loginSteps;
 
     @Test
-    public void loginWithValidCredentials(){
+    public void loginWithValidCredentials() {
         loginSteps.navigateToLogin();
         loginSteps.enterCredentials(Constants.USER_EMAIL, Constants.USER_PASSWORD);
         loginSteps.clickLogIn();
@@ -20,7 +20,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void loginWithInvalidCredentials(){
+    public void loginWithInvalidCredentials() {
         loginSteps.navigateToLogin();
         loginSteps.enterCredentials(Constants.USER_EMAIL, "11111111");
         loginSteps.clickLogIn();

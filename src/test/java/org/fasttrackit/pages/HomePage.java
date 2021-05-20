@@ -13,6 +13,12 @@ public class HomePage extends PageObject {
 
     @FindBy(css = "[title='Log In']")
     private WebElementFacade logInLink;
+    
+    @FindBy(id = "search")
+    private WebElementFacade searchField;
+
+    @FindBy(css = ".search-button")
+    private WebElementFacade searchIcon;
 
     public void clickAccountLink(){
         clickOn(accountLink);
@@ -23,4 +29,11 @@ public class HomePage extends PageObject {
     }
 
 
+    public void setSearchField(String value) {
+        typeInto(searchField, value);
+    }
+
+    public void clickSearchIcon() {
+        clickOn(searchIcon);
+    }
 }
